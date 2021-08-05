@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test thread-count="4" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="smoketests.LoginTests">
+        <methods>
+          <include name="forgotPasswordTest" invocation-numbers="1 0"/>
+          <include name="tearDown"/>
+          <include name="initServer"/>
+        </methods>
+      </class> <!-- smoketests.LoginTests -->
+      <class name="smoketests.PurchaseTests">
+        <methods>
+          <include name="makePurchase" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+          <include name="initServer"/>
+        </methods>
+      </class> <!-- smoketests.PurchaseTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

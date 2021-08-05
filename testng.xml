@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Suite" parallel="methods">
+  <test thread-count="4" name="Test" parallel="classes">
+    <classes>
+      <class name="smoketests.LoginTests"/>
+            <class name="smoketests.PurchaseTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
