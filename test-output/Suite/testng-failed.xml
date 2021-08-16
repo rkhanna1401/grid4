@@ -12,7 +12,7 @@
       </class> <!-- smoketests.LoginTests -->
       <class name="smoketests.PurchaseTests">
         <methods>
-          <include name="makePurchase" invocation-numbers="0 1"/>
+          <include name="makePurchase" invocation-numbers="1 0"/>
           <include name="tearDown"/>
           <include name="initServer"/>
         </methods>
