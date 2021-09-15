@@ -2,5 +2,6 @@
 "standalone_huburl":"http://localhost:4444/wd/hub",
 "hub_node_huburl":"http://localhost:4444",
 "distributed_huburl":"http://192.168.75.164:4444",
+"kube_huburl":"http://127.0.0.1:54165/wd/hub",
 "baseurl":"http://amazon.in"
 }

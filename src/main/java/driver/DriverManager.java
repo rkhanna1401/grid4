@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -31,6 +32,7 @@ public class DriverManager {
 	private static String distributed_huburl;
 	private static String hub_node_huburl;
 	private static String standalone_huburl;
+	private static String kube_huburl;
 	private JsonObject jsonObject;
 	ChromeOptions chromeOptions;
 	SafariOptions safariOptions;
@@ -66,6 +68,7 @@ public class DriverManager {
 		distributed_huburl = JsonUtils.getValFromJson(jsonObject, "distributed_huburl","");
 		hub_node_huburl = JsonUtils.getValFromJson(jsonObject, "hub_node_huburl","");
 		standalone_huburl =  JsonUtils.getValFromJson(jsonObject, "standalone_huburl","");
+		kube_huburl = JsonUtils.getValFromJson(jsonObject, "kube_huburl","");
 	}
 
 
@@ -74,9 +77,18 @@ public class DriverManager {
 		DesiredCapabilities caps = new DesiredCapabilities();
 		if (browserType.equalsIgnoreCase("firefox")) {
 			caps.setBrowserName("firefox");
+			threadLocalDriver.set(new RemoteWebDriver(new URL(url),caps));
 		}
 		if (browserType.equalsIgnoreCase("chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("start-maximized"); // open Browser in maximized mode
+			options.addArguments("disable-infobars"); // disabling infobars
+			options.addArguments("--disable-extensions"); // disabling extensions
+			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+			options.addArguments("--no-sandbox"); // Bypass OS security model
 			caps.setBrowserName("chrome");
+			threadLocalDriver.set(new RemoteWebDriver(new URL(url),options));
+
 		}
 		if (browserType.equalsIgnoreCase("safari")) {
 			caps.setBrowserName("safari");
@@ -85,7 +97,7 @@ public class DriverManager {
 			EdgeOptions edgeOptions = new EdgeOptions();
 			caps.merge(edgeOptions);
 		}
-		threadLocalDriver.set(new RemoteWebDriver(new URL(url),caps));
+		
 		threadLocalDriver.get().manage().window().maximize();
 	}
 
@@ -122,6 +134,9 @@ public class DriverManager {
 			}
 			else if(PropertyManager.getPropertyHelper("configuration").get("distributed_mode").equals("ON")) {
 				getStandaloneHubNodeServerDriver(browserType, platformType,distributed_huburl);
+			}
+			else if(PropertyManager.getPropertyHelper("configuration").get("kubernetes_mode").equals("ON")) {
+				getStandaloneHubNodeServerDriver(browserType, platformType,kube_huburl);
 			}
 			remoteWebDriverList.add(threadLocalDriver.get());
 		}

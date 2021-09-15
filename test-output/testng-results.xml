@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="2" total="6" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="165220" started-at="2021-08-16T12:34:06 IST" finished-at="2021-08-16T12:36:51 IST">
+  <suite name="Suite" duration-ms="16589" started-at="2021-09-02T18:00:28 IST" finished-at="2021-09-02T18:00:45 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="165220" started-at="2021-08-16T12:34:06 IST" finished-at="2021-08-16T12:36:51 IST">
+    <test name="Test" duration-ms="16589" started-at="2021-09-02T18:00:28 IST" finished-at="2021-09-02T18:00:45 IST">
       <class name="smoketests.LoginTests">
-        <test-method status="PASS" signature="initServer()[pri:0, instance:smoketests.LoginTests@7ce6a65d]" name="initServer" is-config="true" duration-ms="31" started-at="2021-08-16T12:34:06 IST" finished-at="2021-08-16T12:34:06 IST">
+        <test-method status="PASS" signature="initServer()[pri:0, instance:smoketests.LoginTests@4abdb505]" name="initServer" is-config="true" duration-ms="41" started-at="2021-09-02T18:00:28 IST" finished-at="2021-09-02T18:00:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initServer -->
-        <test-method status="FAIL" signature="forgotPasswordTest(java.lang.String, java.lang.String)[pri:0, instance:smoketests.LoginTests@7ce6a65d]" name="forgotPasswordTest" duration-ms="165184" started-at="2021-08-16T12:34:06 IST" data-provider="browser" finished-at="2021-08-16T12:36:51 IST">
+        <test-method status="PASS" signature="incorrectPasswordTest1(java.lang.String, java.lang.String)[pri:0, instance:smoketests.LoginTests@4abdb505]" name="incorrectPasswordTest1" duration-ms="11324" started-at="2021-09-02T18:00:28 IST" data-provider="browser" finished-at="2021-09-02T18:00:40 IST">
           <params>
             <param index="0">
               <value>
@@ -24,100 +24,14 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:630)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:165)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at driver.DriverManager.getStandaloneHubNodeServerDriver(DriverManager.java:88)
-at driver.DriverManager.setDriver(DriverManager.java:124)
-at driver.DriverManager.getDriver(DriverManager.java:98)
-at smoketests.LoginTests.forgotPasswordTest(LoginTests.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Stream closed
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:79)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:105)
-at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:39)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
-... 22 more
-Caused by: java.io.IOException: Stream closed
-at java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:170)
-at java.io.BufferedInputStream.reset(BufferedInputStream.java:446)
-at org.asynchttpclient.netty.request.body.NettyInputStreamBody.write(NettyInputStreamBody.java:61)
-at org.asynchttpclient.netty.request.NettyRequestSender.writeRequest(NettyRequestSender.java:433)
-at org.asynchttpclient.netty.channel.NettyConnectListener.writeRequest(NettyConnectListener.java:80)
-at org.asynchttpclient.netty.channel.NettyConnectListener.onSuccess(NettyConnectListener.java:156)
-at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onSuccess(NettyChannelConnector.java:92)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:26)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
-at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
-at io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:300)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-... 1 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgotPasswordTest -->
-        <test-method status="FAIL" signature="forgotPasswordTest(java.lang.String, java.lang.String)[pri:0, instance:smoketests.LoginTests@7ce6a65d]" name="forgotPasswordTest" duration-ms="71086" started-at="2021-08-16T12:34:06 IST" data-provider="browser" finished-at="2021-08-16T12:35:17 IST">
+        </test-method> <!-- incorrectPasswordTest1 -->
+        <test-method status="PASS" signature="incorrectPasswordTest2(java.lang.String, java.lang.String)[pri:0, instance:smoketests.LoginTests@4abdb505]" name="incorrectPasswordTest2" duration-ms="5218" started-at="2021-09-02T18:00:40 IST" data-provider="browser" finished-at="2021-09-02T18:00:45 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
@@ -126,247 +40,14 @@ at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: Connection refused (os error 111)
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '4a607c261036', ip: '172.21.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}], desiredCapabilities=Capabilities {browserName: firefox}}]
-Capabilities {}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: Connection refused (os error 111)
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '4a607c261036', ip: '172.21.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}], desiredCapabilities=Capabilities {browserName: firefox}}]
-Capabilities {}
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:39)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:165)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at driver.DriverManager.getStandaloneHubNodeServerDriver(DriverManager.java:88)
-at driver.DriverManager.setDriver(DriverManager.java:124)
-at driver.DriverManager.getDriver(DriverManager.java:98)
-at smoketests.LoginTests.forgotPasswordTest(LoginTests.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-at java.lang.Thread.run(Thread.java:748)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgotPasswordTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:smoketests.LoginTests@7ce6a65d]" name="tearDown" is-config="true" duration-ms="2" started-at="2021-08-16T12:36:56 IST" finished-at="2021-08-16T12:36:56 IST">
+        </test-method> <!-- incorrectPasswordTest2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:smoketests.LoginTests@4abdb505]" name="tearDown" is-config="true" duration-ms="873" started-at="2021-09-02T18:00:50 IST" finished-at="2021-09-02T18:00:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- smoketests.LoginTests -->
-      <class name="smoketests.PurchaseTests">
-        <test-method status="FAIL" signature="makePurchase(java.lang.String, java.lang.String)[pri:0, instance:smoketests.PurchaseTests@1500955a]" name="makePurchase" duration-ms="164062" started-at="2021-08-16T12:34:06 IST" data-provider="browser" finished-at="2021-08-16T12:36:50 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[mac]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: Connection refused (os error 111)
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '4a607c261036', ip: '172.21.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}], desiredCapabilities=Capabilities {browserName: firefox}}]
-Capabilities {}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: Connection refused (os error 111)
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: 'ec40e3f1d9f1', ip: '172.21.0.7', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '4a607c261036', ip: '172.21.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}], desiredCapabilities=Capabilities {browserName: firefox}}]
-Capabilities {}
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:39)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:165)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at driver.DriverManager.getStandaloneHubNodeServerDriver(DriverManager.java:88)
-at driver.DriverManager.setDriver(DriverManager.java:124)
-at driver.DriverManager.getDriver(DriverManager.java:98)
-at smoketests.PurchaseTests.makePurchase(PurchaseTests.java:13)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-at java.lang.Thread.run(Thread.java:748)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- makePurchase -->
-        <test-method status="FAIL" signature="makePurchase(java.lang.String, java.lang.String)[pri:0, instance:smoketests.PurchaseTests@1500955a]" name="makePurchase" duration-ms="164612" started-at="2021-08-16T12:34:06 IST" data-provider="browser" finished-at="2021-08-16T12:36:50 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[mac]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: session not created
-from chrome not reachable
-  (Session info: chrome=91.0.4472.114)
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '07d1739dd278', ip: '172.21.0.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '07d1739dd278', ip: '172.21.0.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '4a607c261036', ip: '172.21.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: session not created
-from chrome not reachable
-  (Session info: chrome=91.0.4472.114)
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '07d1739dd278', ip: '172.21.0.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '07d1739dd278', ip: '172.21.0.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-rc-1', revision: '74745cf081'
-System info: host: '4a607c261036', ip: '172.21.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.25-linuxkit', java.version: '11.0.11'
-Driver info: driver.version: unknown
-Build info: version: '4.0.0-beta-4', revision: '29f46d02dd'
-System info: host: 'Rishis-MacBook-Pro.local', ip: '2405:204:100d:1821:98f3:584f:2bf5:4479%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:39)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:165)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at driver.DriverManager.getStandaloneHubNodeServerDriver(DriverManager.java:88)
-at driver.DriverManager.setDriver(DriverManager.java:124)
-at driver.DriverManager.getDriver(DriverManager.java:98)
-at smoketests.PurchaseTests.makePurchase(PurchaseTests.java:13)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-at java.lang.Thread.run(Thread.java:748)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- makePurchase -->
-      </class> <!-- smoketests.PurchaseTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

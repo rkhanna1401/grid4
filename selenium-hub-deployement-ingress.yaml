@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: selenium-ingress
+  annotations:
+    nginx.ingress.kubernetes.io: /$1
+spec:
+  rules:
+    - host: r-selenium-grid.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: selenium-hub
+              servicePort: 4444

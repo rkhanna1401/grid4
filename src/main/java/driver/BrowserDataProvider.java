@@ -11,8 +11,8 @@ public class BrowserDataProvider {
 	public static Object[][] browser(){
 		return new Object[][]{
 
-			{BrowserList.chrome.toString(),PlatformList.mac.toString()},
-    		{BrowserList.firefox.toString(),PlatformList.mac.toString()}
+			{BrowserList.chrome.toString(),PlatformList.mac.toString()}
+    		//{BrowserList.firefox.toString(),PlatformList.mac.toString()}
 			//{BrowserList.edge.toString(),PlatformList.mac.toString()}
 
 		};

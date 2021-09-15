@@ -5,18 +5,12 @@
     <classes>
       <class name="smoketests.LoginTests">
         <methods>
-          <include name="forgotPasswordTest" invocation-numbers="1 0"/>
+          <include name="forgotPasswordTest" invocation-numbers="0"/>
+          <include name="incorrectPasswordTest" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="initServer"/>
         </methods>
       </class> <!-- smoketests.LoginTests -->
-      <class name="smoketests.PurchaseTests">
-        <methods>
-          <include name="makePurchase" invocation-numbers="1 0"/>
-          <include name="tearDown"/>
-          <include name="initServer"/>
-        </methods>
-      </class> <!-- smoketests.PurchaseTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: selenium-hub
-        image: selenium/hub:3.141
+        image: selenium/hub
         ports:
           - containerPort: 4444
         resources:
           limits:
-            memory: "1000Mi"
+            memory: "150Mi"
             cpu: ".5"
         livenessProbe:
           httpGet:

@@ -4,7 +4,7 @@
   <test thread-count="4" name="Test" parallel="classes">
     <classes>
       <class name="smoketests.LoginTests"/>
-            <class name="smoketests.PurchaseTests"/>
+           <!--  <class name="smoketests.PurchaseTests"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
