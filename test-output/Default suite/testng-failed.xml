@@ -5,7 +5,7 @@
     <classes>
       <class name="smoketests.LoginTests">
         <methods>
-          <include name="forgotPasswordTest" invocation-numbers="0"/>
+          <include name="incorrectPasswordTest2" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="initServer"/>
         </methods>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16589" started-at="2021-09-02T18:00:28 IST" finished-at="2021-09-02T18:00:45 IST">
+  <suite name="Default suite" duration-ms="11000" started-at="2021-09-16T16:16:04 IST" finished-at="2021-09-16T16:16:15 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16589" started-at="2021-09-02T18:00:28 IST" finished-at="2021-09-02T18:00:45 IST">
-      <class name="smoketests.LoginTests">
-        <test-method status="PASS" signature="initServer()[pri:0, instance:smoketests.LoginTests@4abdb505]" name="initServer" is-config="true" duration-ms="41" started-at="2021-09-02T18:00:28 IST" finished-at="2021-09-02T18:00:28 IST">
+    <test name="Default test" duration-ms="11000" started-at="2021-09-16T16:16:04 IST" finished-at="2021-09-16T16:16:15 IST">
+      <class name="smoketests.DevToolsTests">
+        <test-method status="PASS" signature="initServer()[pri:0, instance:smoketests.DevToolsTests@1500955a]" name="initServer" is-config="true" duration-ms="25" started-at="2021-09-16T16:16:04 IST" finished-at="2021-09-16T16:16:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initServer -->
-        <test-method status="PASS" signature="incorrectPasswordTest1(java.lang.String, java.lang.String)[pri:0, instance:smoketests.LoginTests@4abdb505]" name="incorrectPasswordTest1" duration-ms="11324" started-at="2021-09-02T18:00:28 IST" data-provider="browser" finished-at="2021-09-02T18:00:40 IST">
+        <test-method status="PASS" signature="capturePerformance(java.lang.String, java.lang.String)[pri:0, instance:smoketests.DevToolsTests@1500955a]" name="capturePerformance" duration-ms="10969" started-at="2021-09-16T16:16:04 IST" data-provider="browser" finished-at="2021-09-16T16:16:15 IST">
           <params>
             <param index="0">
               <value>
@@ -26,28 +26,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- incorrectPasswordTest1 -->
-        <test-method status="PASS" signature="incorrectPasswordTest2(java.lang.String, java.lang.String)[pri:0, instance:smoketests.LoginTests@4abdb505]" name="incorrectPasswordTest2" duration-ms="5218" started-at="2021-09-02T18:00:40 IST" data-provider="browser" finished-at="2021-09-02T18:00:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[mac]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- incorrectPasswordTest2 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:smoketests.LoginTests@4abdb505]" name="tearDown" is-config="true" duration-ms="873" started-at="2021-09-02T18:00:50 IST" finished-at="2021-09-02T18:00:51 IST">
+        </test-method> <!-- capturePerformance -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:smoketests.DevToolsTests@1500955a]" name="tearDown" is-config="true" duration-ms="90" started-at="2021-09-16T16:16:20 IST" finished-at="2021-09-16T16:16:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- smoketests.LoginTests -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- smoketests.DevToolsTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -8,15 +8,19 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
+
 import Exceptions.UtilException;
 
 public class GenericUtils {
 
 	private static String parent;
 
-	
+
 	public static boolean isDisplayed(WebElement element) {
 		boolean displayed = false;
 		try {
@@ -38,6 +42,25 @@ public class GenericUtils {
 			if(!parent.equalsIgnoreCase(child)) {
 				driver.switchTo().window(child);
 			}
+		}
+	}
+	
+	public static void openNewWindow(WebDriver driver) {
+		driver.switchTo().newWindow(WindowType.WINDOW);
+	}
+
+	public static void openNewTab(WebDriver driver) {
+		driver.switchTo().newWindow(WindowType.TAB);
+	}
+	
+	public static void captureScreenshot(WebDriver driver, WebElement element) {
+		try {
+			File scrFile = ((TakesScreenshot)element).getScreenshotAs(OutputType.FILE);
+			File dstFile = new File("./x.png");
+			FileUtils.copyFile(scrFile, dstFile);
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 	}
 
@@ -92,8 +115,8 @@ public class GenericUtils {
 		if(!targetFolder.exists()) {
 			targetFolder.mkdir();
 		}
-	
-		
+
+
 		return path;
 	}
 }

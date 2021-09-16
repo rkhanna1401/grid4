@@ -9,7 +9,11 @@ import java.util.Arrays;
 import java.util.logging.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chromium.ChromiumDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v85.network.model.ConnectionType;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -44,6 +48,7 @@ public class DriverManager {
 	private static Logger logger;
 	private static DriverManager driverManager;
 	private static 	String path;
+	private ChromeDriver chromeDriver;
 
 	public static DriverManager getInstance()
 	{
@@ -86,9 +91,7 @@ public class DriverManager {
 			options.addArguments("--disable-extensions"); // disabling extensions
 			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 			options.addArguments("--no-sandbox"); // Bypass OS security model
-			caps.setBrowserName("chrome");
 			threadLocalDriver.set(new RemoteWebDriver(new URL(url),options));
-
 		}
 		if (browserType.equalsIgnoreCase("safari")) {
 			caps.setBrowserName("safari");
@@ -97,8 +100,20 @@ public class DriverManager {
 			EdgeOptions edgeOptions = new EdgeOptions();
 			caps.merge(edgeOptions);
 		}
-		
+
 		threadLocalDriver.get().manage().window().maximize();
+	}
+
+	public void getLocalDriverInstance(String browserType,String platformType) throws MalformedURLException {
+		try {
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("start-maximized");
+			chromeDriver = new ChromeDriver(options);
+			threadLocalDriver.set(chromeDriver);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 
@@ -137,6 +152,9 @@ public class DriverManager {
 			}
 			else if(PropertyManager.getPropertyHelper("configuration").get("kubernetes_mode").equals("ON")) {
 				getStandaloneHubNodeServerDriver(browserType, platformType,kube_huburl);
+			}
+			else {
+				getLocalDriverInstance(browserType, platformType);
 			}
 			remoteWebDriverList.add(threadLocalDriver.get());
 		}
